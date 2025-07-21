@@ -131,7 +131,7 @@ true
 - **C#**
 - **Cache Redis**
 - **Arquitetura limpa com Services e DTOs**
-- - **Docker e Docker-compose**
+- **Docker e Docker-compose**
 
 ---
 
@@ -140,7 +140,7 @@ true
 1️⃣ **Clonar o repositório:**
 
 ```bash
-git clone https://github.com/seuusuario/TravelRouteAPI.git
+git clone https://github.com/wsribeiro100/Projeto_idnt.git
 ```
 
 2️⃣ **Acessar a pasta do projeto:**
