@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - travelroutes_net
+
+  travelroutes_api:
+    image: idnt
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: travelroutes_api
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Redis=redis:6379
+    networks:
+      - travelroutes_net
+
+networks:
+  travelroutes_net:
+    driver: bridge
