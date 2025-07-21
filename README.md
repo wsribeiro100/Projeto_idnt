@@ -30,7 +30,8 @@ cd ProjetoIDNT
 
 3️⃣ **Executar o projeto:**
 
-```docker-compose up
+```bash
+docker-compose up
 ```
 
 4️⃣ **Acessar no navegador:**
