@@ -4,9 +4,77 @@ API RESTful para **gerenciamento e consulta de rotas de viagem** com suporte a c
 
 ---
 
+## ⚙️ Tecnologias
+
+- **ASP.NET Core 8**
+- **C#**
+- **Cache Redis**
+- **Arquitetura Modular com Services e DTOs**
+- **Docker e Docker-compose**
+
+---
+
+## 🚩 Como rodar localmente
+
+1️⃣ **Clonar o repositório:**
+
+```bash
+git clone https://github.com/wsribeiro100/Projeto_idnt.git
+```
+
+2️⃣ **Acessar a pasta do projeto:**
+
+```bash
+cd ProjetoIDNT
+```
+
+3️⃣ **Executar o projeto:**
+
+```docker-compose up
+```
+
+4️⃣ **Acessar no navegador:**
+
+```
+https://localhost:8080/swagger
+```
+
+---
+
+## 🤝 Contribuição
+
+
+---
+
+## 📧 Contato
+
+Dúvidas ou sugestões? Entre em contato:
+
+- Email: [wsribeiro100@gmail.com](mailto\:wsribeiro100@gmail.com)
+- LinkedIn: [Wellyngton Sampaio](https://www.linkedin.com/in/wellyngtonsampaio)
+
+---
+
 ## 📦 Endpoints
 
-### 🔹 1️⃣ **Listar todas as rotas**
+### 🔹 1️⃣ **Obter melhor rota entre origem e destino**
+
+**GET** `/api/TravelRoute/{origem}/{destino}`
+
+Retorna a melhor rota (menor custo) entre uma origem e um destino específico.
+
+📥 **Request:**
+
+- `origem` (string): aeroporto de origem
+- `destino` (string): aeroporto de destino
+
+📤 **Response:** `200 OK`
+
+```json
+"GRU - BRC - SCL"
+```
+
+### 🔹 2️⃣ **Listar todas as rotas**
 
 **GET** `/api/TravelRoute`
 
@@ -25,25 +93,6 @@ Retorna uma lista de todas as rotas cadastradas.
     },
     ...
 ]
-```
-
----
-
-### 🔹 2️⃣ **Obter melhor rota entre origem e destino**
-
-**GET** `/api/TravelRoute/{origem}/{destino}`
-
-Retorna a melhor rota (menor custo) entre uma origem e um destino específico.
-
-📥 **Request:**
-
-- `origem` (string): aeroporto de origem
-- `destino` (string): aeroporto de destino
-
-📤 **Response:** `200 OK`
-
-```json
-"GRU - BRC - SCL"
 ```
 
 ---
@@ -122,56 +171,3 @@ Remove uma rota do sistema pelo `id`.
 ```json
 true
 ```
-
----
-
-## ⚙️ Tecnologias
-
-- **ASP.NET Core 8**
-- **C#**
-- **Cache Redis**
-- **Arquitetura limpa com Services e DTOs**
-- **Docker e Docker-compose**
-
----
-
-## 🚩 Como rodar localmente
-
-1️⃣ **Clonar o repositório:**
-
-```bash
-git clone https://github.com/wsribeiro100/Projeto_idnt.git
-```
-
-2️⃣ **Acessar a pasta do projeto:**
-
-```bash
-cd ProjetoIDNT
-```
-
-3️⃣ **Executar o projeto:**
-
-```docker-compose up
-```
-
-4️⃣ **Acessar no navegador:**
-
-```
-https://localhost:8080/swagger
-```
-
----
-
-## 🤝 Contribuição
-
-Pull requests são bem-vindos. Para grandes mudanças, abra uma issue antes para discutirmos o que deseja modificar.
-
----
-
-## 📧 Contato
-
-Dúvidas ou sugestões? Entre em contato:
-
-- Email: [wsribeiro100@gmail.com](mailto\:wsribeiro100@gmail.com)
-- LinkedIn: [Wellyngton Sampaio](https://www.linkedin.com/in/wellyngtonsampaio)
-
