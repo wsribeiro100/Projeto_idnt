@@ -146,7 +146,7 @@ git clone https://github.com/wsribeiro100/Projeto_idnt.git
 2️⃣ **Acessar a pasta do projeto:**
 
 ```bash
-cd TravelRouteAPI
+cd ProjetoIDNT
 ```
 
 3️⃣ **Executar o projeto:**

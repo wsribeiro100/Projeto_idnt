@@ -1,5 +1,4 @@
 using IDNT.TravelRoutes;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +17,7 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-   
+   //Deixei fora intensionalmente para ter acesso ao Swagger
 }
 
 app.UseSwagger();
